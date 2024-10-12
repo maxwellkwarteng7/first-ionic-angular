@@ -10,9 +10,11 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div>
+  <div style="padding-inline: 2rem">
     <p>{{text}}</p>
+    <ion-button (click)="changeText()">change</ion-button>
   </div>
-
-  <ion-button (click) ="changeText()">change</ion-button>
+  <form [formGroup]="testForm">
+      
+  </form>
 </ion-content>
