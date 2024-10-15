@@ -14,7 +14,19 @@
     <p>{{text}}</p>
     <ion-button (click)="changeText()">change</ion-button>
   </div>
+  <p>Heyy the form is supposed to appear here</p>
   <form [formGroup]="testForm">
-      
+    <label for="">Name</label>
+    <input type="text" placeholder="Enter your name " formControlName="name" />
+    <label for="">Age</label>
+    <input type="number" placeholder="Enter your age" formControlName="age" />
+    <button
+      type="submit"
+      (click)="handleSubmit()"
+      [disabled]="testForm.invalid"
+      ]
+    >
+      Submit
+    </button>
   </form>
 </ion-content>

@@ -46,4 +46,9 @@ export class HomePage {
   changeText() {
     this.text = "Changed !!";
   }
+  handleSubmit() {
+    // take the values
+    let testValues = this.testForm.value;
+    console.log(testValues);
+  }
 }
