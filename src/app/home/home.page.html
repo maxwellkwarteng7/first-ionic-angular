@@ -20,6 +20,14 @@
     <input type="text" placeholder="Enter your name " formControlName="name" />
     <label for="">Age</label>
     <input type="number" placeholder="Enter your age" formControlName="age" />
+    <div *ngIf="controls.age.errors && controls.age.touched">
+      <p *ngIf="controls.age.errors['required']">
+        The age field is required 
+      </p>
+      <p *ngIf="controls.age.errors['min']">
+        Age should be more than 20
+      </p>
+    </div>
     <button
       type="submit"
       (click)="handleSubmit()"
