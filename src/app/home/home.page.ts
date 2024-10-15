@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import {
   FormControl,
@@ -31,6 +32,7 @@ import {
     IonTitle,
     IonContent,
     ReactiveFormsModule,
+    CommonModule
   ],
 })
 export class HomePage {
@@ -50,5 +52,10 @@ export class HomePage {
     // take the values
     let testValues = this.testForm.value;
     console.log(testValues);
+  }
+
+  // get the controls to show the error easily 
+  get controls() {
+    return this.testForm.controls; 
   }
 }
