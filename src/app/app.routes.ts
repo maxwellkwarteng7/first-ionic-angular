@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { RecipesComponent } from './recipes/recipes.component';
 
 export const routes: Routes = [
   {
@@ -10,4 +11,11 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'recipe', 
+    component: RecipesComponent,
+    children: [
+      
+    ]
+  }
 ];
