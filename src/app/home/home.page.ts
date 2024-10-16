@@ -15,6 +15,7 @@ import {
   IonItem,
   IonLabel,
   IonInput,
+  IonList,
 } from "@ionic/angular/standalone";
 
 @Component({
@@ -23,6 +24,7 @@ import {
   styleUrls: ["home.page.scss"],
   standalone: true,
   imports: [
+    IonList,
     IonInput,
     IonLabel,
     IonItem,
@@ -32,7 +34,7 @@ import {
     IonTitle,
     IonContent,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
   ],
 })
 export class HomePage {
@@ -54,8 +56,8 @@ export class HomePage {
     console.log(testValues);
   }
 
-  // get the controls to show the error easily 
+  // get the controls to show the error easily
   get controls() {
-    return this.testForm.controls; 
+    return this.testForm.controls;
   }
 }

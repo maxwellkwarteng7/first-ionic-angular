@@ -1,40 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Blank </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div style="padding-inline: 2rem">
-    <p>{{text}}</p>
-    <ion-button (click)="changeText()">change</ion-button>
+<div
+  class="bg-white border-b-[0.2px] text-black shadow-lg h-[10vh] w-full flex items-center justify-between"
+>
+  <div>
+    <ion-title> Hello </ion-title>
   </div>
-  <p>Heyy the form is supposed to appear here</p>
-  <form [formGroup]="testForm">
-    <label for="">Name</label>
-    <input type="text" placeholder="Enter your name " formControlName="name" />
-    <label for="">Age</label>
-    <input type="number" placeholder="Enter your age" formControlName="age" />
-    <div *ngIf="controls.age.errors && controls.age.touched">
-      <p *ngIf="controls.age.errors['required']">
-        The age field is required 
-      </p>
-      <p *ngIf="controls.age.errors['min']">
-        Age should be more than 20
-      </p>
-    </div>
-    <button
-      type="submit"
-      (click)="handleSubmit()"
-      [disabled]="testForm.invalid"
-      ]
-    >
-      Submit
-    </button>
-  </form>
+  <div class="">
+    <ul>
+      <li class="list-none flex items-center gap-4">
+        <a href="">Home</a>
+        <a href="">Home</a>
+        <a href="">Home</a>
+        <a href="">Home</a>
+        <a href="">Home</a>
+        <a href="">Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ion-content>
+  <div class="bg-white h-[90vh]"></div>
 </ion-content>
