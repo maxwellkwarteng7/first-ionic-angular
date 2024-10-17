@@ -37,10 +37,16 @@ import {
 export class RecipesComponent implements OnInit {
   recipe: Recipe[] = [];
 
+  isLoggedIn: boolean = false; 
+
   constructor(private recipeService: RecipeServiceService) {}
 
   ngOnInit(): void {
     this.recipe = this.recipeService.getAllRecipes();
     console.log("recipes", this.recipe);
   }
+
+  handleLogin() {
+    this.isLoggedIn = true; 
+}
 }
