@@ -37,7 +37,7 @@ import {
 export class RecipesComponent implements OnInit {
   recipe: Recipe[] = [];
 
-  isLoggedIn: boolean = false; 
+  isLoggedIn: boolean = false;
 
   constructor(private recipeService: RecipeServiceService) {}
 
@@ -47,6 +47,8 @@ export class RecipesComponent implements OnInit {
   }
 
   handleLogin() {
-    this.isLoggedIn = true; 
-}
+    this.isLoggedIn = true;
+  }
+
+  checkIfAuthenticated() {}
 }
