@@ -50,5 +50,11 @@ export class RecipesComponent implements OnInit {
     this.isLoggedIn = true;
   }
 
-  checkIfAuthenticated() {}
+  checkIfAuthenticated() {
+    if (this.isLoggedIn) {
+      console.log("this user has their token saved and is logged in");
+    } else {
+      console.log("you are not allowed here"); 
+    }
+  }
 }

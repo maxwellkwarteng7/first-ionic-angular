@@ -33,4 +33,9 @@ export class RecipeServiceService {
       ...this.recipes.find((recipe) => recipe.id == id)
     }; 
   }
+
+  getAndDeleteRecipe(id: string) {
+    const newArray = this.recipes.filter((recipe) => recipe.id != id); 
+    return newArray; 
+  }
 }
