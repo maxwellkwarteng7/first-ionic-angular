@@ -38,4 +38,10 @@ export class RecipeServiceService {
     const newArray = this.recipes.filter((recipe) => recipe.id != id); 
     return newArray; 
   }
+
+  // update recipe  
+  updateRecipe(id: string) {
+    //find the recipe 
+    
+  }
 }
