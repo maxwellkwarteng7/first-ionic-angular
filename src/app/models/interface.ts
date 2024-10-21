@@ -4,3 +4,11 @@ export interface Recipe {
   imageUrl: string;
   ingredients: string[];
 }
+
+
+export interface expectedData  {
+  name: string, 
+  age: string, 
+  email: string, 
+  role : string 
+}
