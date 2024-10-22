@@ -1,9 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>recipe-detail</ion-title>
+    <ion-back-button defaultHref="/recipe" slot="start"></ion-back-button>
+    <ion-title>{{singleRecipe.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  @if(singleRecipe){
+  <div class="w-full h-[30vh] overflow-hidden">
+    <ion-img [src]="singleRecipe.imageUrl" class="object-cover"></ion-img>
+  </div>
+  <div class="px-4 text-center pt-4">
+    <ion-label> {{singleRecipe.title}} </ion-label>
+    <!-- display the ingredients -->
+    <ion-list>
+      <ion-item *ngFor="let ig of singleRecipe.ingredients">
+        <ion-label>{{ig}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  }@else {
+  <div class="flex items-center justify-center px-4">
+    <p>Issue fetching recipe .. sorry try again later</p>
+  </div>
+  }
 </ion-content>
