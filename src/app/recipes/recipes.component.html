@@ -20,10 +20,15 @@
   }
    </ion-list>
    <div class="flex justify-end pr-2">
-    <div class="py-3 w-[250px] flex items-center justify-between">
-      <button>Previous</button>
+    <div class="py-3 w-[150px] flex items-center text-xs gap-4">
+      <button (click)="changePage(currentPage -1)" [className]="currentPage <= 1 ? 'invisible' : ''">Previous</button>
       <p> {{currentPage}} of {{totalPages}} </p>
-      <button>Next</button>
+       <!-- <div class="flex items-center justify-center">
+        @for (_ of recipe; track $index) {
+            <button [className]="currentPage === $index + 1  ? 'bg-blue-500 text-white' : '' " (click)="changePage($index + 1)">{{$index + 1}}</button>
+        }
+       </div> -->
+      <button (click)="changePage(currentPage + 1)" [className]="currentPage >= totalPages ? 'invisible' : ''">Next</button>
     </div>
    </div>
   

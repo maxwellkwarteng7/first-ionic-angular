@@ -56,24 +56,25 @@ export class RecipesComponent implements OnInit {
 
   // doing pagination in this 
   currentPage: number = 1; 
-  itemsPerPage: number = 5; 
-  totalItems: number = this.recipe.length; 
+  itemsPerPage: number = 4; 
 
-  // the function to segment the data 
+  // getter function to segment the data 
   get getPaginatedItems() {
     let start = (this.currentPage - 1) * this.itemsPerPage; 
-    let end = this.currentPage + this.itemsPerPage; 
+    let end = start + this.itemsPerPage; 
     // segment the data 
     let paginateditems = this.recipe.slice(start, end); 
-    console.log(paginateditems);
     return paginateditems; 
   }
+  // getter function to get the total pages 
   get totalPages() {
     let totalPages = Math.round(this.recipe.length / this.itemsPerPage); 
     return totalPages; 
   }
 
-  
+  changePage(pageNumber: number) {
+    this.currentPage = pageNumber; 
+  }
   
   
 }
