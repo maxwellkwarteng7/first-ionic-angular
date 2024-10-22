@@ -38,26 +38,7 @@ import {
   ],
 })
 export class HomePage {
-  text: string = "Hello this is new ";
   constructor() {}
-
   // making my form
-  testForm = new FormGroup({
-    name: new FormControl("", [Validators.required, Validators.min(5)]),
-    age: new FormControl(0, [Validators.required, Validators.min(20)]),
-  });
-
-  changeText() {
-    this.text = "Changed !!";
-  }
-  handleSubmit() {
-    // take the values
-    let testValues = this.testForm.value;
-    console.log(testValues);
-  }
-
-  // get the controls to show the error easily
-  get controls() {
-    return this.testForm.controls;
-  }
+ 
 }

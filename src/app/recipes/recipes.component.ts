@@ -37,7 +37,7 @@ import {
 export class RecipesComponent implements OnInit {
   recipe: Recipe[] = [];
 
-  isLoggedIn: boolean = false;
+
 
   constructor(private recipeService: RecipeServiceService) {}
 
@@ -46,15 +46,7 @@ export class RecipesComponent implements OnInit {
     console.log("recipes", this.recipe);
   }
 
-  handleLogin() {
-    this.isLoggedIn = true;
-  }
 
-  checkIfAuthenticated() {
-    if (this.isLoggedIn) {
-      console.log("this user has their token saved and is logged in");
-    } else {
-      console.log("you are not allowed here"); 
-    }
-  }
+
+
 }
