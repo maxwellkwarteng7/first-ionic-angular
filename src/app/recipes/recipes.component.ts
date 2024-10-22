@@ -15,6 +15,7 @@ import {
   IonContent,
   IonImg,
 } from "@ionic/angular/standalone";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-recipes",
@@ -32,7 +33,8 @@ import {
     IonTitle,
     IonImg,
     IonAvatar,
-    IonLabel
+    IonLabel, 
+    CommonModule
   ],
 })
 export class RecipesComponent implements OnInit {
@@ -40,10 +42,38 @@ export class RecipesComponent implements OnInit {
 
   isLoggedIn: boolean = false;
 
-  constructor(private recipeService: RecipeServiceService) {}
+  constructor(private recipeService: RecipeServiceService , private router : Router) {}
 
   ngOnInit(): void {
     this.recipe = this.recipeService.getAllRecipes();
-    console.log("recipes", this.recipe);
+    this.getPaginatedItems;
   }
+
+  //navigate to a single recipe page 
+  singleRecipe(id: string) {
+    this.router.navigateByUrl(`recipe/${id}`); 
+  }
+
+  // doing pagination in this 
+  currentPage: number = 1; 
+  itemsPerPage: number = 5; 
+  totalItems: number = this.recipe.length; 
+
+  // the function to segment the data 
+  get getPaginatedItems() {
+    let start = (this.currentPage - 1) * this.itemsPerPage; 
+    let end = this.currentPage + this.itemsPerPage; 
+    // segment the data 
+    let paginateditems = this.recipe.slice(start, end); 
+    console.log(paginateditems);
+    return paginateditems; 
+  }
+  get totalPages() {
+    let totalPages = Math.round(this.recipe.length / this.itemsPerPage); 
+    return totalPages; 
+  }
+
+  
+  
+  
 }
