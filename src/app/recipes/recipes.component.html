@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Recipes Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- the main content -->
+ <ion-content>
+   <ion-list>
+    @for (recipe of recipe; track $index) {
+    <ion-item>
+        <ion-avatar slot="start">
+          <ion-img [src]="recipe.imageUrl"></ion-img>
+        </ion-avatar>
+        <ion-label> {{recipe.title}} </ion-label>
+    </ion-item>
+  }
+   </ion-list>
+ </ion-content>

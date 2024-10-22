@@ -6,9 +6,3 @@ export interface Recipe {
 }
 
 
-export interface expectedData  {
-  name: string, 
-  age: string, 
-  email: string, 
-  role : string 
-}

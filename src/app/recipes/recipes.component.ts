@@ -32,12 +32,13 @@ import {
     IonTitle,
     IonImg,
     IonAvatar,
+    IonLabel
   ],
 })
 export class RecipesComponent implements OnInit {
   recipe: Recipe[] = [];
 
-
+  isLoggedIn: boolean = false;
 
   constructor(private recipeService: RecipeServiceService) {}
 
@@ -45,8 +46,4 @@ export class RecipesComponent implements OnInit {
     this.recipe = this.recipeService.getAllRecipes();
     console.log("recipes", this.recipe);
   }
-
-
-
-
 }
