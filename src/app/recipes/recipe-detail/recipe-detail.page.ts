@@ -78,7 +78,7 @@ export class RecipeDetailPage implements OnInit {
           text: 'Yes',
           handler: () => {
             this.recipeService.deleteRecipe(id); 
-            this.router.navigateByUrl('/recipes');  
+            this.router.navigateByUrl('recipe');  
           }
         }
       ]
