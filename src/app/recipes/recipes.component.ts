@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit , Input } from "@angular/core";
 import { RecipeServiceService } from "./recipe-service.service";
 import { Recipe } from "../models/interface";
 import { CommonModule } from "@angular/common";
@@ -39,6 +39,7 @@ import { Router } from "@angular/router";
 })
 export class RecipesComponent implements OnInit {
   recipe: Recipe[] = [];
+  @Input() namesData!: string; 
 
   isLoggedIn: boolean = false;
 

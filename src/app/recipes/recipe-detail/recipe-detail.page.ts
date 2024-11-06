@@ -12,10 +12,12 @@ import {
   IonList,
   IonItem,
   IonBackButton,
+  IonButton,
 } from "@ionic/angular/standalone";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { RecipeServiceService } from "../recipe-service.service";
 import { Recipe } from "src/app/models/interface";
+import { AlertController} from '@ionic/angular'
 
 @Component({
   selector: "app-recipe-detail",
@@ -23,6 +25,7 @@ import { Recipe } from "src/app/models/interface";
   styleUrls: ["./recipe-detail.page.scss"],
   standalone: true,
   imports: [
+    IonButton,
     IonBackButton,
     IonItem,
     IonList,
@@ -43,7 +46,9 @@ export class RecipeDetailPage implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
-    private recipeService: RecipeServiceService
+    private recipeService: RecipeServiceService,
+    private Alert: AlertController, 
+    private router : Router
   ) {}
 
   ngOnInit() {
@@ -56,5 +61,28 @@ export class RecipeDetailPage implements OnInit {
       }
       // get the recipe from the service .
     });
+  }
+
+  // delete the recipe 
+
+  async presentAlert(id : string) {
+    const alert = this.Alert.create({
+      header: 'Are you sure you want to delete ?',
+      message: 'You cannot revert this ',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel'
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.recipeService.deleteRecipe(id); 
+            this.router.navigateByUrl('/recipes');  
+          }
+        }
+      ]
+    }); 
+    (await alert).present();
   }
 }
