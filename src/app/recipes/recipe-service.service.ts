@@ -31,16 +31,16 @@ export class RecipeServiceService {
   // generating methods to call them
 
   getAllRecipes(): Recipe[] {
-    return [...this.recipes]; 
+    return [...this.recipes];
   }
 
   getSingleRecipe(id: string)  {
-    return  this.recipes.find((recipe) => recipe.id == id)
+    return { ...this.recipes.find((recipe) => recipe.id == id) }
      
   }
 
-  deleteRecipe(id: string) {
-    return [...this.recipes.filter((recipe) => recipe.id !== id)]; 
+  deleteRecipe(id: string) : Recipe[] {
+   return  [...this.recipes.filter((recipe) => recipe.id !== id)];
   }
 
 }
