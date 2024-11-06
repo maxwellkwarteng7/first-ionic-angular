@@ -6,7 +6,7 @@ import { RecipeDetailPage } from './recipes/recipe-detail/recipe-detail.page';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'recipe',
+    redirectTo: 'home',
     pathMatch : 'full'
   },
   {

@@ -24,54 +24,6 @@ export class RecipeServiceService {
       imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
       ingredients : ['tomato' , 'ginger' , 'palm fruit']
     } , 
-    {
-      id: '823', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '267', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '2309', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '2367', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '123', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '293', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '209', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
-    {
-      id: '24', 
-      title: 'Palmnut Soup', 
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1699541755563-1691ecaa7d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291cHxlbnwwfHwwfHx8MA%3D%3D', 
-      ingredients : ['tomato' , 'ginger' , 'palm fruit']
-    } , 
   ]
 
   constructor() { }
@@ -85,6 +37,10 @@ export class RecipeServiceService {
   getSingleRecipe(id: string)  {
     return  this.recipes.find((recipe) => recipe.id == id)
      
+  }
+
+  deleteRecipe(id: string) {
+    return [...this.recipes.filter((recipe) => recipe.id !== id)]; 
   }
 
 }

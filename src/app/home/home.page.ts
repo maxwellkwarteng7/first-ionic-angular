@@ -17,6 +17,10 @@ import {
   IonInput,
   IonList,
 } from "@ionic/angular/standalone";
+import { RecipesComponent } from "../recipes/recipes.component";
+import { RouterLink } from "@angular/router";
+
+
 
 @Component({
   selector: "app-home",
@@ -35,10 +39,18 @@ import {
     IonContent,
     ReactiveFormsModule,
     CommonModule,
+    RecipesComponent, 
+    RouterLink, 
   ],
 })
 export class HomePage {
-  constructor() {}
+  constructor() {
+  }
+
+
+
   // making my form
+
+
  
 }

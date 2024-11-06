@@ -8,7 +8,7 @@
 <ion-content [fullscreen]="true">
   @if(singleRecipe){
   <div class="w-full h-[30vh] overflow-hidden">
-    <ion-img [src]="singleRecipe.imageUrl" class="object-cover"></ion-img>
+    <ion-img [src]="singleRecipe.imageUrl" class="object-contain w-full h-full"></ion-img>
   </div>
   <div class="px-4 text-center pt-4">
     <ion-label> {{singleRecipe.title}} </ion-label>
@@ -18,6 +18,11 @@
         <ion-label>{{ig}}</ion-label>
       </ion-item>
     </ion-list>
+  </div>
+  <div class="flex items-center justify-center mt-5">
+    <button (click)="presentAlert(singleRecipe.id)" class="w-[30%] bg-red-600 cursor-pointer py-2 px-3">
+      Delete
+    </button>
   </div>
   }@else {
   <div class="flex items-center justify-center px-4">
