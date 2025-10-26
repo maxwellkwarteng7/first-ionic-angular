@@ -1,0 +1,13 @@
+.active {
+  background-color: black;
+  color: #fff;
+}
+
+.active ion-icon,
+.active span {
+  color: #fff !important;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}

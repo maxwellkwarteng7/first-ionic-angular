@@ -1,0 +1,63 @@
+<div class="w-full h-screen bg-white flex items-center">
+  <!-- sidebar side -->
+  <div
+    class="w-full h-screen max-h-screen self-start bg-black/10  overflow-hidden md:w-72 fixed inset-0 md:relative z-[99999] transition-transform duration-500 md:translate-x-0"
+    [ngClass]="{
+      'translate-x-0': sideBarOpened(),
+      'translate-x-[-100%]': !sideBarOpened()
+    }"
+    (click)="closeSideBar()"
+  >
+  <!-- sidebar component comes here -->
+   <app-side-bar></app-side-bar>
+</div>
+  <!-- The header and the main content -->
+  <div
+    class="h-screen overflow-y-scroll hide-scrollbar w-full  md:w-[calc(100%-288px)]"
+  >
+    <!-- The header -->
+    <div
+      class="h-[10vh] w-full flex items-center gap-8 justify-between md:justify-end bg-white px-4 md:px-6 text-black"
+    >
+      <!-- the menu icon -->
+      <ion-icon
+        name="menu"
+        (click)="openSideBar()"
+        class="size-7 cursor-pointer md:hidden"
+      ></ion-icon>
+
+      <!-- The notifications and user profile -->
+      <div class="flex items-center gap-8">
+        <div class="relative">
+          <ion-icon
+            name="notifications-outline"
+            class="size-6 text-black"
+          ></ion-icon>
+          <span
+            class="size-5 flex items-center justify-center bg-black text-white font-semibold text-[9px] rounded-full absolute right-[-7px] top-[-8px]"
+            >20</span
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <img
+            src="../../assets/icon/favicon.png"
+            alt="profile-image"
+            class="rounded-full size-9"
+            loading="lazy"
+            fetchpriority="high"
+          />
+
+          <div>
+            <h1 class="font-semibold text-sm">Maxwell</h1>
+            <p class="text-gray-500 text-xs capitalize">Provider</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- the main content  -->
+       <div class="h-[90vh] overflow-y-scroll hide-scrollbar bg-gray-100 p-4 md:px-6 text-black">
+         <router-outlet></router-outlet>
+        </div>
+  </div>
+</div>

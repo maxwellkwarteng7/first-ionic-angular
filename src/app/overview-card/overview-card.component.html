@@ -1,0 +1,24 @@
+<!-- The card component  -->
+ <div class="w-full max-h-[13rem]  shadow-sm rounded-2xl bg-white pt-4">
+  <!-- icon , title and subtitle -->
+   <div class="flex items-center gap-5 px-4">
+    <span class="flex items-center justify-center p-3 rounded-full bg-gray-100">
+      <ion-icon [name]="icon()" class="size-5"></ion-icon>
+    </span>
+    <div>
+      <h1 class="font-semibold">{{title()}}</h1>
+      <p class="text-[13px] text-gray-500 mt-1">{{subTitle() || 'subtitle'}}</p>
+    </div>
+   </div>
+
+   <!-- The value -->
+    <div class="mt-8 mb-3 px-4">
+      <h1 class="font-semibold text-2xl">{{value()}}</h1>
+    </div>
+
+    <!-- the link part -->
+     <div class="pt-3 pb-3 px-4 rounded-b-2xl   border-t-solid border-t-[0.5px] border-t-gray-200 flex items-center justify-between transition-all duration-200 ease-in-out  text-gray-500 hover:text-black cursor-pointer group hover:border-gray-300" (click)="goToPage()">
+      <span class="text-sm">See details</span>
+      <ion-icon name="chevron-forward" class="size-4 translate-x-[-4px] group-hover:translate-x-0 transition-transform duration-300 ease-out"></ion-icon>
+     </div>
+ </div>

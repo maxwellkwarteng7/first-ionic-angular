@@ -1,0 +1,49 @@
+<div>
+  <div class="pb-2">
+    <h1 class="font-semibold text-lg sm:text-xl">Overview</h1>
+    <p class="text-sm text-gray-500">Here is a summary of your data</p>
+  </div>
+  <!-- The grid cards  -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mt-3"
+  >
+    <app-overview-card
+      [title]="'My announcements'"
+      [subTitle]="'Total Announcements'"
+      [icon]="'megaphone'"
+      [value]="50"
+      [link]="'recipe'"
+    ></app-overview-card>
+    <app-overview-card
+      [title]="'My stories'"
+      [subTitle]="'Total stories'"
+      [icon]="'book'"
+      [value]="2"
+      [link]="'recipe'"
+    ></app-overview-card>
+    <app-overview-card
+      [title]="'My provider requests'"
+      [subTitle]="'Total provider requests'"
+      [icon]="'briefcase'"
+      [value]="30"
+      [link]="'recipe'"
+    ></app-overview-card>
+    <app-overview-card
+      [title]="'My property'"
+      [subTitle]="'Total property'"
+      [icon]="'home'"
+      [value]="20"
+      [link]="'recipe'"
+    ></app-overview-card>
+  </div>
+
+  <!-- if charts then we can use one chart here. -->
+   <div class="w-full flex flex-col lg:flex-row items-center gap-5 mt-5">
+    <div class="w-full lg:w-[70%] h-[20rem] bg-white shadow-sm rounded-2xl p-3">
+      <app-barchart></app-barchart>
+    </div>
+    <div class="w-full lg:w-[30%] h-[20rem] bg-white shadow-sm rounded-2xl p-3">
+      <app-piechart></app-piechart>
+    </div>
+   </div>
+</div>
