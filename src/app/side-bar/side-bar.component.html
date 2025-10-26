@@ -1,0 +1,60 @@
+
+<div class="w-[75%] z-[200] md:w-full px-4 md:px-6 relative h-screen bg-white pt-8 text-black" (click)="maintainSideBar($event)">
+  <!-- The funeral logo and text -->
+   <div class="flex place-items-center gap-5 z-2">
+    <img src="../../assets/icon/favicon.png" alt="app icon" class="size-8 object-cover">
+    <h1 class="font-semibold text-lg">Funeral Gh</h1>
+   </div>
+
+   <!-- Now the sidebar links -->
+    <ul class="pt-5 pb-8 overflow-y-scroll hide-scrollbar h-full w-full">
+  @for (link of visibleLinks; track link.title) {
+    <li class="mb-1">
+      <!-- Parent link -->
+      <div
+        class="flex items-center justify-between p-3 rounded-lg cursor-pointer hover:bg-gray-200 transition-all"
+        (click)="toggleDropdown(link)"
+        [routerLink]="!link.children ? link.route : null"
+        [routerLinkActive]="!link.children ? 'active' : ''"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="flex items-center gap-3">
+          <ion-icon [name]="link.icon" class="text-lg"></ion-icon>
+          <span>{{ link.title }}</span>
+        </div>
+
+        @if (link.children?.length) {
+          <ion-icon
+            [name]="isExpanded(link) ? 'chevron-up' : 'chevron-down'"
+            class="text-gray-500 transition-transform duration-200"
+            [class.rotate-180]="isExpanded(link)"
+          ></ion-icon>
+        }
+      </div>
+
+      <!-- Children (expandable area) -->
+      @if (link.children && link.children.length > 0) {
+        <ul
+          class="ml-8 overflow-hidden transition-all duration-300 ease-in-out"
+          [style.maxHeight]="isExpanded(link) ? link.children.length * 40 + 'px' : '0px'"
+        >
+          @for (child of link.children; track child.title) {
+            <li
+              [routerLink]="child.route"
+              routerLinkActive="active"
+              class="flex items-center gap-3 p-2 rounded-md cursor-pointer hover:bg-gray-200 transition-all"
+            >
+              <ion-icon [name]="child.icon" class="text-base"></ion-icon>
+              <span class="text-sm">{{ child.title }}</span>
+            </li>
+          }
+        </ul>
+      }
+    </li>
+  }
+</ul>
+
+
+
+
+</div>
