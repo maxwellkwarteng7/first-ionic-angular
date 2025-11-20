@@ -33,7 +33,7 @@ export class BarchartComponent implements OnInit {
         data: [1200, 2300, 1800, 2900, 3400, 2600, 1000, 2000, 3000, 4000],
         backgroundColor: '#4B5563',
         borderRadius: 25,
-        hoverBackgroundColor: '#009688',
+        hoverBackgroundColor: 'black',
       },
     ],
   };

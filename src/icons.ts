@@ -30,6 +30,10 @@ import {
   chevronDown,
   chevronUp,
   chevronForward,
+  rocketOutline, 
+  flash, 
+  diamondOutline, 
+  checkmarkCircle
 } from 'ionicons/icons';
 
 export function registeredIcons() {
@@ -64,5 +68,9 @@ export function registeredIcons() {
     chevronForward,
     chevronDown,
     chevronUp,
+    rocketOutline, 
+    flash, 
+    diamondOutline, 
+    checkmarkCircle
   });
 }

@@ -8,9 +8,13 @@ import { OverviewComponentComponent } from './overview-component/overview-compon
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'upgrade-membership',
     pathMatch : 'full'
   },
+  {
+    path: 'upgrade-membership', 
+    loadComponent: () => import('./upgrade-plan/upgrade-plan.component').then(m => m.UpgradePlanComponent)
+  } , 
   {
     path: 'home',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),

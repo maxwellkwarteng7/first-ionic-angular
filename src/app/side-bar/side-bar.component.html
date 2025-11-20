@@ -54,7 +54,26 @@
   }
 </ul>
 
+<!-- 
+  @if (p.children && p.children.length > 0) {
+        <ul
+          class="ml-8 overflow-hidden transition-all duration-300 ease-in-out"
+          [style.maxHeight]="isExpanded(p) ? p.children.length * 40 + 'px' : '0px'"
+        >
+          @for (sub of p.children; track sub.title) {
+            <li
+              [routerLink]="sub.url"
+              routerLinkActive="active"
+              class="flex items-center gap-3 p-2 rounded-md cursor-pointer hover:bg-gray-200 transition-all"
+            >
+              <ion-icon [name]="sub.icon" class="text-base"></ion-icon>
+              <span class="text-sm">{{ sub.title }}</span>
+            </li>
+          }
+        </ul>
+      }
 
+-->
 
 
 </div>
