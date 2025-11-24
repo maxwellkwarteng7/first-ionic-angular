@@ -1,154 +1,176 @@
 
-<div class="bg-white min-h-[100vh] overflow-y-scroll py-12 px-4">
-    <div class="max-w-6xl mx-auto">
-        <!-- Header -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-3">Choose Your Plan</h1>
-            <p class="text-gray-600 text-lg">Select the perfect plan for your needs</p>
-        </div>
 
-        <!-- Pricing Cards -->
-        <div class="grid md:grid-cols-3 gap-8 items-center">
-            <!-- Free Plan -->
-            <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-center mb-6">
-                    <div class="inline-flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full mb-4">
-                        <ion-icon name="rocket-outline" class="text-3xl text-gray-600"></ion-icon>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Free</h2>
-                    <div class="mb-4">
-                        <span class="text-4xl font-bold text-gray-900">$0</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Perfect for getting started</p>
-                </div>
+<div class="min-h-screen bg-gray-100 text-black">
+    <div class="max-w-5xl m-auto mt-6 flex flex-col items-center justify-center gap-4">
+        <!-- priciing dummy button -->
+         <button class="flex items-center gap-2 bg-gray-600 text-white rounded-full px-3 py-2">
+            <ion-icon name="card-outline" class="size-3 -rotate-45"></ion-icon>
+            <span class="text-sm">Pricing</span>
+         </button>
 
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-gray-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">5 projects</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-gray-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Basic analytics</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-gray-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Community support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-gray-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">1 GB storage</span>
-                    </li>
-                </ul>
+         <!-- title  -->
+          <h1 class="font-semibold text-xl sm:text-2xl xl:text-4xl">Curated Pricing Structure</h1>
 
-                <button class="w-full py-3 px-6 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200">
-                    Current Plan
-                </button>
-            </div>
-
-            <!-- Professional Plan (Recommended) -->
-            <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 shadow-2xl transform md:scale-105 relative hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span class="bg-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
-                        RECOMMENDED
-                    </span>
-                </div>
-
-                <div class="text-center mb-6">
-                    <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-500/20 rounded-full mb-4">
-                        <ion-icon name="flash" class="text-3xl text-blue-400"></ion-icon>
-                    </div>
-                    <h2 class="text-2xl font-bold text-white mb-2">Professional</h2>
-                    <div class="mb-4">
-                        <span class="text-4xl font-bold text-white">$29</span>
-                        <span class="text-gray-400">/month</span>
-                    </div>
-                    <p class="text-gray-300 text-sm">For growing businesses</p>
-                </div>
-
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">Unlimited projects</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">Advanced analytics</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">Priority support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">100 GB storage</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">Custom integrations</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-blue-400 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-200 text-sm">API access</span>
-                    </li>
-                </ul>
-
-                <button class="w-full py-3 px-6 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                    Upgrade Now
-                </button>
-            </div>
-
-            <!-- Ultimate Plan -->
-            <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="text-center mb-6">
-                    <div class="inline-flex items-center justify-center w-14 h-14 bg-purple-100 rounded-full mb-4">
-                        <ion-icon name="diamond-outline" class="text-3xl text-purple-600"></ion-icon>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Ultimate</h2>
-                    <div class="mb-4">
-                        <span class="text-4xl font-bold text-gray-900">$99</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">For enterprise teams</p>
-                </div>
-
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Everything in Professional</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Unlimited storage</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">24/7 dedicated support</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Advanced security</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Custom contracts</span>
-                    </li>
-                    <li class="flex items-start">
-                        <ion-icon name="checkmark-circle" class="text-xl text-purple-600 mt-0.5 mr-3 flex-shrink-0"></ion-icon>
-                        <span class="text-gray-600 text-sm">Onboarding assistance</span>
-                    </li>
-                </ul>
-
-                <button class="w-full py-3 px-6 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200">
-                    Upgrade Now
-                </button>
-            </div>
-        </div>
-
-        <!-- Footer Note -->
-        <div class="text-center mt-12">
-            <p class="text-gray-500 text-sm">All plans include a 14-day money-back guarantee</p>
-        </div>
+          <!-- description -->
+           <p class="text-gray-500 text-sm text-center">Get real time brand , campaign and cretor insights designed to help you find <br> opportunities faster and close smarter</p>
     </div>
+
+    <!-- The pricing cards  -->
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center max-w-5xl mx-auto p-4  mt-6">
+        <!-- Free card -->
+        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+          <!-- The card -->
+         <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
+            <!-- the header -->
+             <div class="flex items-center gap-2">
+               <ion-icon name="star" class="text-gray-500"></ion-icon>
+               <h3 class="text-base sm:text-xl font-semibold">Free</h3>
+             </div>
+             <!-- plan description -->
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">A simple, respectful way to share funeral updates with essential features</p>
+
+              <!-- the amount section -->
+               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+                 <div class="flex items-end gap-1">
+                   <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;0</h2>
+                  <span class="text-gray-500 text-xs">/year</span>
+                 </div>
+                  <!-- The upgrade button -->
+                   <div class="flex items-center justify-center w-full mt-5">
+                      <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-gray-500 group-hover:text-white group-hover:border-gray-600 transition-all duration-500 ease-out">
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
+                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                      </button>
+                   </div>
+               </div>
+               <!-- The benefits section -->
+                <div class="mt-3 flex flex-col justify-center gap-2 text-base">
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-black"></ion-icon>
+                     <span class="text-gray-600">2 documents or images</span>
+                  </span>
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-black"></ion-icon>
+                     <span class="text-gray-600">1 product/service subscription</span>
+                  </span>
+                  <span class="flex items-center gap-3 opacity-50">
+                     <ion-icon name="checkmark-circle" class="text-black"></ion-icon>
+                     <span class="text-gray-600">0 sheets</span>
+                  </span>
+                </div>
+         </div>
+
+          <div class="w-full h-full absolute inset-0 z-10 opacity-0 peer-hover:opacity-100 bg-gray-300 peer-hover:translate-y-0 rounded-3xl  translate-y-[10%] transition-all duration-500 ease-out">
+            <div class="flex items-center justify-center text-gray-600 text-sm h-[10%]">
+               Ideal for free users
+            </div>
+         </div>
+        </div>
+        <!-- Professional Card-->
+        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+          <!-- The card -->
+         <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
+            <!-- the header -->
+             <div class="flex items-center gap-2">
+               <ion-icon name="flash" class="text-blue-500"></ion-icon>
+               <h3 class="text-base sm:text-xl font-semibold">Professional</h3>
+             </div>
+             <!-- plan description -->
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">More storage, more media options, and deeper personalization.</p>
+
+              <!-- the amount section -->
+               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+                 <div class="flex items-end gap-1">
+                   <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;200</h2>
+                  <span class="text-gray-500 text-xs">/year</span>
+                 </div>
+                  <!-- The upgrade button -->
+                   <div class="flex items-center justify-center w-full mt-5">
+                      <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-600 transition-all duration-500 ease-out">
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
+                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                      </button>
+                   </div>
+               </div>
+               <!-- The benefits section -->
+                <div class="mt-3 flex flex-col justify-center gap-2 text-base">
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-blue-600"></ion-icon>
+                     <span class="text-gray-600">10 documents or images</span>
+                  </span>
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-blue-600"></ion-icon>
+                     <span class="text-gray-600">10 product/service subscription</span>
+                  </span>
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-blue-600"></ion-icon>
+                     <span class="text-gray-600">10 sheets</span>
+                  </span>
+                 
+                
+                </div>
+         </div>
+
+          <div class="w-full h-full absolute inset-0 z-10  peer-hover:opacity-100 bg-blue-100 peer-hover:translate-y-0 rounded-3xl  translate-y-[0%] transition-all duration-500 ease-out">
+            <div class="flex items-center justify-center text-blue-500 text-sm h-[10%]">
+               Ideal for Pro features
+            </div>
+         </div>
+        </div>
+        <!-- The ultimate card -->
+        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+          <!-- The card -->
+         <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
+            <!-- the header -->
+             <div class="flex items-center gap-2">
+               <ion-icon name="rocket-outline" class="text-teal-500"></ion-icon>
+               <h3 class="text-base sm:text-xl font-semibold">Ultimate</h3>
+             </div>
+             <!-- plan description -->
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">The highest level of customization, capacity, and support</p>
+
+              <!-- the amount section -->
+               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+                 <div class="flex items-end gap-1">
+                   <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;500</h2>
+                  <span class="text-gray-500 text-xs">/year</span>
+                 </div>
+                  <!-- The upgrade button -->
+                   <div class="flex items-center justify-center w-full mt-5">
+                      <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-600 transition-all duration-500 ease-out">
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
+                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                      </button>
+                   </div>
+               </div>
+               <!-- The benefits section -->
+                <div class="mt-3 flex flex-col justify-center gap-2 text-base">
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-teal-600"></ion-icon>
+                     <span class="text-gray-600">50 documents or images</span>
+                  </span>
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-teal-600"></ion-icon>
+                     <span class="text-gray-600">20 product/service subscription</span>
+                  </span>
+                  <span class="flex items-center gap-3">
+                     <ion-icon name="checkmark-circle" class="text-teal-600"></ion-icon>
+                     <span class="text-gray-600">50 sheets</span>
+                  </span>
+                 
+                
+                </div>
+         </div>
+
+          <div class="w-full h-full absolute inset-0 z-10 opacity-0 peer-hover:opacity-100 bg-teal-100 peer-hover:translate-y-0 rounded-3xl  translate-y-[10%] transition-all duration-500 ease-out">
+            <div class="flex items-center justify-center text-teal-500 text-sm h-[10%]">
+               Ideal for ultimate features
+            </div>
+         </div>
+        </div>
+        
+
+
+     </div>
+  
 </div>

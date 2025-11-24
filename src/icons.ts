@@ -30,10 +30,14 @@ import {
   chevronDown,
   chevronUp,
   chevronForward,
-  rocketOutline, 
-  flash, 
-  diamondOutline, 
-  checkmarkCircle
+  rocketOutline,
+  flash,
+  diamondOutline,
+  checkmarkCircle,
+  checkmarkCircleOutline,
+  checkmarkDoneCircleOutline,
+  cardOutline,
+  star,
 } from 'ionicons/icons';
 
 export function registeredIcons() {
@@ -58,6 +62,7 @@ export function registeredIcons() {
     personCircle,
     peopleCircle,
     map,
+    star,
     homeOutline,
     addCircle,
     heart,
@@ -68,9 +73,12 @@ export function registeredIcons() {
     chevronForward,
     chevronDown,
     chevronUp,
-    rocketOutline, 
-    flash, 
-    diamondOutline, 
-    checkmarkCircle
+    rocketOutline,
+    flash,
+    diamondOutline,
+    checkmarkCircle,
+    cardOutline,
+    checkmarkCircleOutline,
+    checkmarkDoneCircleOutline,
   });
 }
