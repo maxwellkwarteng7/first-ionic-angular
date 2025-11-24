@@ -7,6 +7,7 @@ import {
   person,
   briefcase,
   documentText,
+  rocket ,
   shareSocial,
   megaphone,
   book,
@@ -38,11 +39,14 @@ import {
   checkmarkDoneCircleOutline,
   cardOutline,
   star,
+  gift,
 } from 'ionicons/icons';
 
 export function registeredIcons() {
   addIcons({
+    rocket ,
     menu,
+    gift,
     notifications,
     notificationsOutline,
     home,

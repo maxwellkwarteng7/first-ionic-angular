@@ -1,45 +1,45 @@
 
 
-<div class="min-h-screen bg-gray-100 text-black">
+<div class="min-h-screen overflow-y-scroll bg-gray-100 text-black">
     <div class="max-w-5xl m-auto mt-6 flex flex-col items-center justify-center gap-4">
         <!-- priciing dummy button -->
-         <button class="flex items-center gap-2 bg-gray-600 text-white rounded-full px-3 py-2">
+         <button class="flex items-center gap-2 bg-gray-200 text-gray-500 rounded-full px-3 py-2">
             <ion-icon name="card-outline" class="size-3 -rotate-45"></ion-icon>
             <span class="text-sm">Pricing</span>
          </button>
 
          <!-- title  -->
-          <h1 class="font-semibold text-xl sm:text-2xl xl:text-4xl">Curated Pricing Structure</h1>
+          <h1 class="font-semibold text-xl sm:text-2xl xl:text-4xl">Plan Options</h1>
 
           <!-- description -->
-           <p class="text-gray-500 text-sm text-center">Get real time brand , campaign and cretor insights designed to help you find <br> opportunities faster and close smarter</p>
+           <p class="text-gray-500 text-sm text-center">Tools and insights tailored to help families share, manage, and honor every service with ease.</p>
     </div>
 
     <!-- The pricing cards  -->
-     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center max-w-5xl mx-auto p-4  mt-6">
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center max-w-5xl mx-auto p-4  mt-10">
         <!-- Free card -->
-        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+        <div class="relative w-full min-h-[28rem]  max-h-[30rem] overflow-hidden">
           <!-- The card -->
-         <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
+         <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group">
             <!-- the header -->
              <div class="flex items-center gap-2">
-               <ion-icon name="star" class="text-gray-500"></ion-icon>
+               <ion-icon name="gift" class="text-gray-500"></ion-icon>
                <h3 class="text-base sm:text-xl font-semibold">Free</h3>
              </div>
              <!-- plan description -->
-              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">A simple, respectful way to share funeral updates with essential features</p>
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full selection:bg-gray-500 selection:text-white">A simple, respectful way to share funeral updates with essential features</p>
 
               <!-- the amount section -->
-               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+               <div class="py-5  border-solid border-b-[1px] border-b-gray-100">
                  <div class="flex items-end gap-1">
                    <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;0</h2>
                   <span class="text-gray-500 text-xs">/year</span>
                  </div>
                   <!-- The upgrade button -->
                    <div class="flex items-center justify-center w-full mt-5">
-                      <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-gray-500 group-hover:text-white group-hover:border-gray-600 transition-all duration-500 ease-out">
-                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
-                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                      <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-gray-500 group-hover:text-white group-hover:border-gray-600 transition-all duration-500 ease-out cursor-default">
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">CURRENT PLAN</span>
+                        <ion-icon name="gift" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
                       </button>
                    </div>
                </div>
@@ -60,14 +60,14 @@
                 </div>
          </div>
 
-          <div class="w-full h-full absolute inset-0 z-10 opacity-0 peer-hover:opacity-100 bg-gray-300 peer-hover:translate-y-0 rounded-3xl  translate-y-[10%] transition-all duration-500 ease-out">
+          <div class="w-full h-full absolute inset-0 z-10 opacity-0 peer-hover:opacity-100 bg-gray-200 peer-hover:translate-y-0 rounded-3xl  translate-y-[10%] transition-all duration-500 ease-out">
             <div class="flex items-center justify-center text-gray-600 text-sm h-[10%]">
                Ideal for free users
             </div>
          </div>
         </div>
         <!-- Professional Card-->
-        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+        <div class="relative w-full min-h-[28rem] lg:min-h-[30rem]  max-h-[32rem] overflow-hidden">
           <!-- The card -->
          <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
             <!-- the header -->
@@ -76,10 +76,10 @@
                <h3 class="text-base sm:text-xl font-semibold">Professional</h3>
              </div>
              <!-- plan description -->
-              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">More storage, more media options, and deeper personalization.</p>
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full selection:bg-blue-400 selection:text-white">More storage, more media options, and deeper personalization.</p>
 
               <!-- the amount section -->
-               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+               <div class="py-5  border-solid border-b-[1px] border-b-gray-100">
                  <div class="flex items-end gap-1">
                    <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;200</h2>
                   <span class="text-gray-500 text-xs">/year</span>
@@ -87,8 +87,8 @@
                   <!-- The upgrade button -->
                    <div class="flex items-center justify-center w-full mt-5">
                       <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-600 transition-all duration-500 ease-out">
-                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
-                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE TO PRO</span>
+                        <ion-icon name="flash" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
                       </button>
                    </div>
                </div>
@@ -118,19 +118,19 @@
          </div>
         </div>
         <!-- The ultimate card -->
-        <div class="relative w-full min-h-[30rem]  max-h-[32rem] overflow-hidden">
+        <div class="relative w-full min-h-[28rem]  max-h-[30rem] overflow-hidden">
           <!-- The card -->
          <div class="absolute bottom-0 bg-white z-50 rounded-3xl w-full h-[90%] shadow-sm p-4 peer group cursor-pointer">
             <!-- the header -->
              <div class="flex items-center gap-2">
-               <ion-icon name="rocket-outline" class="text-teal-500"></ion-icon>
+               <ion-icon name="rocket" class="text-teal-500"></ion-icon>
                <h3 class="text-base sm:text-xl font-semibold">Ultimate</h3>
              </div>
              <!-- plan description -->
-              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full">The highest level of customization, capacity, and support</p>
+              <p class="mt-3 text-gray-400 text-sm border-solid border-b-[1px] border-b-gray-100 pb-3 w-full selection:bg-teal-400 selection:text-white">The highest level of customization, capacity, and support</p>
 
               <!-- the amount section -->
-               <div class="py-4  border-solid border-b-[1px] border-b-gray-100">
+               <div class="py-5  border-solid border-b-[1px] border-b-gray-100">
                  <div class="flex items-end gap-1">
                    <h2 class="font-bold text-xl sm:text-2xl xl:text-3xl ">&#8373;500</h2>
                   <span class="text-gray-500 text-xs">/year</span>
@@ -138,8 +138,8 @@
                   <!-- The upgrade button -->
                    <div class="flex items-center justify-center w-full mt-5">
                       <button class="w-[80%] py-3 border border-solid border-gray-200 rounded-full px-4 flex items-center justify-center gap-3 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-600 transition-all duration-500 ease-out">
-                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">UPGRADE</span>
-                        <ion-icon name="card" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
+                        <span class="translate-x-2 transition-transform duration-500 ease-out group-hover:translate-x-0">GET ULTIMATE</span>
+                        <ion-icon name="rocket" class="translate-y-2 invisible transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:visible text-white"></ion-icon>
                       </button>
                    </div>
                </div>
